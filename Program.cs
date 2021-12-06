@@ -267,21 +267,22 @@ namespace Samlingsklasser
             for( int i=0; i<999999; i++ )
             {
                 Console.WriteLine(" Mata in ett tal: ");
-                double input = Console.ReadLine();
-                Övning2lista.Add(input);
+                double tal = double.Parse(Console.ReadLine());
+
+
+                if (tal == 0)
+                {
+                    Environment.Exit(1);
+                }
+                else
+                {
+                    Övning2lista.Add(tal);
+
+                    Console.WriteLine("Medelvärdet: " + Övning2lista.Average().ToString("0.00"));
+                }
+
             }
-
-            if (input == 0)
-            {
-                
-            }
-
-
-            Console.WriteLine("Medelvärdet: " + Övning2lista.Average().ToString("0.00"));
-
-
         }
-
         static void Övning3()
         {
 
